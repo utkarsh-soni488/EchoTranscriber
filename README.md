@@ -8,11 +8,6 @@
 - Transcribe audio to text with high accuracy.
 - Simple and intuitive user interface.
 
-## Screenshot
-
-### Application Interface
-
-![Application Interface](docs/screenshots/application-interface.png)
 
 ## Installation
 
