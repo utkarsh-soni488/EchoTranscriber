@@ -1,75 +1,76 @@
-# Audio-to-Text Application
+# EchoTranscriber
 
-Welcome to the Audio-to-Text Application! This project consists of two parts: a Spring Boot backend and a React frontend. The application allows users to upload audio files and get a transcription of the audio content.
+**EchoTranscriber** is an advanced audio-to-text application that leverages OpenAI’s Whisper model to convert spoken language into written text seamlessly.
 
-## Repository Structure
+## Features
 
-- `backend/` - Contains the Spring Boot application.
-- `frontend/` - Contains the React application.
+- Upload audio files in various formats.
+- Transcribe audio to text with high accuracy.
+- Simple and intuitive user interface.
 
-## Getting Started
+## Screenshot
 
-### Prerequisites
+### Application Interface
 
-- Java 21 or later
-- Node.js and npm (Node Package Manager)
+![Application Interface](screenshots/application-interface.png)
 
-### Backend Setup
+## Installation
 
-1. Navigate to the `backend` directory:
+### Frontend
+
+1. Navigate to the `frontend` directory:
    ```bash
-   cd backend
-Ensure that you have the required dependencies:
-bash
-Copy code
-./mvnw clean install
-Create an .env file in the backend directory with the following content:
-env
-Copy code
-spring.ai.openai.api-key=YOUR_OPENAI_API_KEY
-Run the Spring Boot application:
-bash
-Copy code
-./mvnw spring-boot:run
-The backend server will start on http://localhost:8080.
-Frontend Setup
-Navigate to the frontend directory:
-bash
-Copy code
-cd ../frontend
-Install the required dependencies:
+   cd frontend
+Install dependencies:
 bash
 Copy code
 npm install
-Start the React application:
+Start the development server:
 bash
 Copy code
 npm start
-The frontend application will open in your browser at http://localhost:3000.
+Backend
+Navigate to the backend directory:
+bash
+Copy code
+cd backend
+Build the project:
+bash
+Copy code
+./mvnw clean install
+Run the application:
+bash
+Copy code
+./mvnw spring-boot:run
+Configuration
+
+Update the application.properties file in the backend directory with your OpenAI API key:
+
+properties
+Copy code
+spring.application.name=Audio-to-text
+spring.ai.openai.api-key=YOUR_OPENAI_API_KEY
+spring.ai.openai.audio.transcription.base-url=https://api.openai.com
+spring.ai.openai.audio.transcription.options.model=whisper-1
+spring.ai.openai.audio.transcription.options.response-format=json
+Replace YOUR_OPENAI_API_KEY with your actual API key.
+
 Usage
 
-Open the React application in your browser.
-Upload an audio file using the file input.
-Click the "Upload and Transcribe" button.
-The transcription result will be displayed on the page.
-Folder Structure
+Open the frontend application in your browser.
+Upload an audio file.
+Click "Upload and Transcribe" to get the transcription.
+Contributing
 
-backend/
-src/ - Contains the source code of the Spring Boot application.
-pom.xml - Maven configuration file.
-frontend/
-src/ - Contains the source code of the React application.
-package.json - Node.js package configuration file.
+Feel free to open issues or submit pull requests if you have suggestions or improvements.
+
 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-Acknowledgements
-
-Spring Boot for the backend framework.
-React for the frontend library.
-OpenAI for the transcription service.
-sql
+markdown
 Copy code
 
-You can replace `YOUR_OPENAI_API_KEY` with your actual OpenAI API key and update any
+**Instructions**:
+- Make sure to replace `docs/screenshots/application-interface.png` with the actual path and filename of your screenshot.
+- Replace `YOUR_OPENAI_API_KEY` with your actual OpenAI API key in the configuration section.
